@@ -57,6 +57,6 @@ app.get('/', function(req, res) {
 
 const port = process.env.PORT || 2400;
 const server = https.createServer(httpsOptions, app)
-    .listen(port, () => {
-        console.log('server running at ' + port)
+    .listen(2400, () => {
+        console.log('server running at ' + 2400)
     })
