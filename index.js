@@ -17,6 +17,8 @@ const axios = require('axios')
 const clientID = '764f336bf522359d74c7'
 const clientSecret = 'de57e03aa5640478cee72668110be54e7eaceb9d'
 
+const port = process.env.PORT || 2400;
+
 // Declare the callback route
 app.get('/github/callback', (req, res) => {
 
@@ -54,9 +56,7 @@ app.get('/', function(req, res) {
 });
 
 
+app.listen(port,() => {
 
-const port = process.env.PORT || 2400;
-const server = https.createServer(httpsOptions, app)
-    .listen(2400, () => {
-        console.log('server running at ' + 2400)
-    })
+        console.log(```server running at ${port} desde la consola```);
+    });
